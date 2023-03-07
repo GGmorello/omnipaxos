@@ -170,7 +170,7 @@ pub mod sequence_paxos {
     }
 
     /// A struct for a Paxos message that also includes sender and receiver.
-    #[derive(Clone, Debug)]
+    #[derive(Clone, Debug, Serialize, Deserialize)]
     pub struct PaxosMessage<T, S>
     where
         T: Entry,
